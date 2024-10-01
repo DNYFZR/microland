@@ -2,7 +2,7 @@ interface AudioPath {
   [key: string]: string[]
 };
 
-export const audioDir:string = "./src/audio/TR-808/"
+export const audioDir:string = "./audio/TR-808/"
 
 export const audioFiles:AudioPath = {
   "BD" : [
