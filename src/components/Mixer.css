@@ -1,0 +1,57 @@
+.mixer-controls {
+  max-width: 80vw;
+}
+
+.drumpad-container {
+  display: flex; 
+  margin: 8px;
+}
+
+.drumpad-label {
+  display: flex;
+  align-items: center;
+  padding: 0.5vw; 
+  font-weight: bold; 
+  position: relative; 
+}
+
+.drumpad { 
+  display: flex;
+  margin: 10px; 
+  padding: 1vw; 
+  position: relative; 
+}
+
+.square-button {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #666;
+  border-radius: 8px;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: absolute; /* Ensure label does not overlap other elements */
+  top: 0;
+  left: 0;
+}
+
+/* Hide the checkbox for drumpad UI */
+input[type="checkbox"] {
+  display: none;
+}
+
+/* Change color when checkbox is checked */
+input[type="checkbox"]:checked + .square-button {
+  background-color: var(--sub-background-color); /* Checked color */
+}
+
+/* Optional: Add hover effect */
+.square-button:hover {
+  background-color: var(--sub-background-color); /* Hover color */
+}
+

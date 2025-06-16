@@ -1,3 +1,21 @@
+export interface SampleConfig {
+  bassDrum: HTMLAudioElement;
+  snareDrum: HTMLAudioElement;
+  openHat: HTMLAudioElement;
+  closedHat: HTMLAudioElement;
+  cymbal: HTMLAudioElement;
+}
+
+export interface Track {
+  trackNames: string[];
+  audioTracks: HTMLAudioElement[];
+}
+
+export interface Beat {
+  on: boolean;
+  audioTrack: HTMLAudioElement;
+}
+
 interface AudioPath {
   [key: string]: string[]
 };

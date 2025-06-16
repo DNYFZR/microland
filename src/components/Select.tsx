@@ -1,6 +1,6 @@
 // Form Select Element 
-import React from "react"
 import "./Select.css"
+import React from "react"
 
 interface selectProps {
   displayName?: string;
@@ -12,10 +12,10 @@ interface selectProps {
   labelClassName?:string;
 };
 
-const Select:React.FC<selectProps> = ({displayName, keyName, value, className, onChange, selectOptions, labelClassName}) => {
+const Select:React.FC<selectProps> = ({keyName, value, className, onChange, selectOptions, labelClassName}) => {
   return(
     <div className="select-container">
-      {displayName && <label className={labelClassName? labelClassName : "select-label"}>{displayName}</label>}
+      {keyName && <label className={labelClassName? labelClassName : "select-label"}>{keyName.toUpperCase()}</label>}
       <select 
         name={keyName} 
         value={value? value : undefined}
